@@ -319,6 +319,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "NewUser";
             this.Text = "Add user";
+            this.Load += new System.EventHandler(this.NewUser_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

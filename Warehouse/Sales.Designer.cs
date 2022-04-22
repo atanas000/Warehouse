@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sales));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.partnerBox = new System.Windows.Forms.TextBox();
@@ -41,6 +42,12 @@
             this.userBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.num = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stockName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.measure = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -54,15 +61,8 @@
             this.cancelBtn = new System.Windows.Forms.Button();
             this.saveBtn = new System.Windows.Forms.Button();
             this.commentBtn = new System.Windows.Forms.Button();
-            this.refreshBtn = new System.Windows.Forms.Button();
             this.searchBtn = new System.Windows.Forms.Button();
             this.searchBox = new System.Windows.Forms.TextBox();
-            this.num = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stockName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.measure = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,10 +80,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("SF Pro Rounded", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(9, 65);
+            this.label2.Location = new System.Drawing.Point(19, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 15);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Partner";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -93,7 +93,7 @@
             this.partnerBox.Location = new System.Drawing.Point(110, 62);
             this.partnerBox.Name = "partnerBox";
             this.partnerBox.Size = new System.Drawing.Size(221, 23);
-            this.partnerBox.TabIndex = 2;
+            this.partnerBox.TabIndex = 1;
             // 
             // locationBox
             // 
@@ -101,17 +101,17 @@
             this.locationBox.Location = new System.Drawing.Point(110, 93);
             this.locationBox.Name = "locationBox";
             this.locationBox.Size = new System.Drawing.Size(221, 23);
-            this.locationBox.TabIndex = 4;
+            this.locationBox.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("SF Pro Rounded", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(9, 96);
+            this.label3.Location = new System.Drawing.Point(19, 96);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 15);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Location";
+            this.label3.Size = new System.Drawing.Size(29, 15);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Site";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // userBox
@@ -120,16 +120,16 @@
             this.userBox.Location = new System.Drawing.Point(110, 124);
             this.userBox.Name = "userBox";
             this.userBox.Size = new System.Drawing.Size(221, 23);
-            this.userBox.TabIndex = 6;
+            this.userBox.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("SF Pro Rounded", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(9, 127);
+            this.label4.Location = new System.Drawing.Point(19, 127);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(33, 15);
-            this.label4.TabIndex = 5;
+            this.label4.TabIndex = 0;
             this.label4.Text = "User";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -147,6 +147,66 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(929, 327);
             this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView1_RowsAdded);
+            // 
+            // num
+            // 
+            this.num.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.num.DefaultCellStyle = dataGridViewCellStyle1;
+            this.num.HeaderText = "№";
+            this.num.Name = "num";
+            this.num.Width = 46;
+            // 
+            // stockName
+            // 
+            this.stockName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.stockName.HeaderText = "Stock";
+            this.stockName.MinimumWidth = 460;
+            this.stockName.Name = "stockName";
+            this.stockName.Width = 460;
+            // 
+            // measure
+            // 
+            this.measure.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.measure.DefaultCellStyle = dataGridViewCellStyle2;
+            this.measure.HeaderText = "Measure";
+            this.measure.MinimumWidth = 100;
+            this.measure.Name = "measure";
+            this.measure.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.measure.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // quantity
+            // 
+            this.quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.quantity.DefaultCellStyle = dataGridViewCellStyle3;
+            this.quantity.HeaderText = "Quantity";
+            this.quantity.Name = "quantity";
+            this.quantity.Width = 80;
+            // 
+            // price1
+            // 
+            this.price1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Format = "C2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.price1.DefaultCellStyle = dataGridViewCellStyle4;
+            this.price1.HeaderText = "Price for 1 piece";
+            this.price1.MinimumWidth = 100;
+            this.price1.Name = "price1";
+            // 
+            // sum
+            // 
+            this.sum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Format = "C2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.sum.DefaultCellStyle = dataGridViewCellStyle5;
+            this.sum.HeaderText = "Sum";
+            this.sum.MinimumWidth = 100;
+            this.sum.Name = "sum";
             // 
             // label5
             // 
@@ -220,9 +280,10 @@
             this.partnerShow.Location = new System.Drawing.Point(304, 64);
             this.partnerShow.Name = "partnerShow";
             this.partnerShow.Size = new System.Drawing.Size(25, 18);
-            this.partnerShow.TabIndex = 14;
+            this.partnerShow.TabIndex = 2;
             this.partnerShow.Text = "...";
             this.partnerShow.UseVisualStyleBackColor = true;
+            this.partnerShow.Click += new System.EventHandler(this.partnerShow_Click);
             // 
             // locationShow
             // 
@@ -230,9 +291,10 @@
             this.locationShow.Location = new System.Drawing.Point(304, 95);
             this.locationShow.Name = "locationShow";
             this.locationShow.Size = new System.Drawing.Size(25, 18);
-            this.locationShow.TabIndex = 15;
+            this.locationShow.TabIndex = 4;
             this.locationShow.Text = "...";
             this.locationShow.UseVisualStyleBackColor = true;
+            this.locationShow.Click += new System.EventHandler(this.locationShow_Click);
             // 
             // userShow
             // 
@@ -240,7 +302,7 @@
             this.userShow.Location = new System.Drawing.Point(304, 126);
             this.userShow.Name = "userShow";
             this.userShow.Size = new System.Drawing.Size(25, 18);
-            this.userShow.TabIndex = 16;
+            this.userShow.TabIndex = 6;
             this.userShow.Text = "...";
             this.userShow.UseVisualStyleBackColor = true;
             this.userShow.Click += new System.EventHandler(this.userShow_Click);
@@ -250,7 +312,7 @@
             this.optBtn.Location = new System.Drawing.Point(12, 534);
             this.optBtn.Name = "optBtn";
             this.optBtn.Size = new System.Drawing.Size(86, 23);
-            this.optBtn.TabIndex = 17;
+            this.optBtn.TabIndex = 8;
             this.optBtn.Text = "Options";
             this.optBtn.UseVisualStyleBackColor = true;
             // 
@@ -259,7 +321,7 @@
             this.cancelBtn.Location = new System.Drawing.Point(855, 534);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(86, 23);
-            this.cancelBtn.TabIndex = 18;
+            this.cancelBtn.TabIndex = 14;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = true;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
@@ -269,7 +331,7 @@
             this.saveBtn.Location = new System.Drawing.Point(763, 534);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(86, 23);
-            this.saveBtn.TabIndex = 19;
+            this.saveBtn.TabIndex = 13;
             this.saveBtn.Text = "Save";
             this.saveBtn.UseVisualStyleBackColor = true;
             // 
@@ -278,25 +340,16 @@
             this.commentBtn.Location = new System.Drawing.Point(671, 534);
             this.commentBtn.Name = "commentBtn";
             this.commentBtn.Size = new System.Drawing.Size(86, 23);
-            this.commentBtn.TabIndex = 20;
+            this.commentBtn.TabIndex = 12;
             this.commentBtn.Text = "Comment";
             this.commentBtn.UseVisualStyleBackColor = true;
-            // 
-            // refreshBtn
-            // 
-            this.refreshBtn.Location = new System.Drawing.Point(579, 534);
-            this.refreshBtn.Name = "refreshBtn";
-            this.refreshBtn.Size = new System.Drawing.Size(86, 23);
-            this.refreshBtn.TabIndex = 21;
-            this.refreshBtn.Text = "Refresh";
-            this.refreshBtn.UseVisualStyleBackColor = true;
             // 
             // searchBtn
             // 
             this.searchBtn.Location = new System.Drawing.Point(379, 534);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(86, 23);
-            this.searchBtn.TabIndex = 22;
+            this.searchBtn.TabIndex = 10;
             this.searchBtn.Text = "Search";
             this.searchBtn.UseVisualStyleBackColor = true;
             // 
@@ -306,66 +359,7 @@
             this.searchBox.Location = new System.Drawing.Point(187, 534);
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(186, 23);
-            this.searchBox.TabIndex = 23;
-            // 
-            // num
-            // 
-            this.num.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.num.DefaultCellStyle = dataGridViewCellStyle21;
-            this.num.HeaderText = "№";
-            this.num.Name = "num";
-            this.num.Width = 46;
-            // 
-            // stockName
-            // 
-            this.stockName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.stockName.HeaderText = "Stock";
-            this.stockName.MinimumWidth = 460;
-            this.stockName.Name = "stockName";
-            this.stockName.Width = 460;
-            // 
-            // measure
-            // 
-            this.measure.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.measure.DefaultCellStyle = dataGridViewCellStyle22;
-            this.measure.HeaderText = "Measure";
-            this.measure.MinimumWidth = 100;
-            this.measure.Name = "measure";
-            this.measure.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.measure.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // quantity
-            // 
-            this.quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.quantity.DefaultCellStyle = dataGridViewCellStyle23;
-            this.quantity.HeaderText = "Quantity";
-            this.quantity.Name = "quantity";
-            this.quantity.Width = 80;
-            // 
-            // price1
-            // 
-            this.price1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle24.Format = "C2";
-            dataGridViewCellStyle24.NullValue = null;
-            this.price1.DefaultCellStyle = dataGridViewCellStyle24;
-            this.price1.HeaderText = "Price for 1 piece";
-            this.price1.MinimumWidth = 100;
-            this.price1.Name = "price1";
-            // 
-            // sum
-            // 
-            this.sum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle25.Format = "C2";
-            dataGridViewCellStyle25.NullValue = null;
-            this.sum.DefaultCellStyle = dataGridViewCellStyle25;
-            this.sum.HeaderText = "Sum";
-            this.sum.MinimumWidth = 100;
-            this.sum.Name = "sum";
+            this.searchBox.TabIndex = 9;
             // 
             // Sales
             // 
@@ -374,7 +368,6 @@
             this.ClientSize = new System.Drawing.Size(953, 569);
             this.Controls.Add(this.searchBox);
             this.Controls.Add(this.searchBtn);
-            this.Controls.Add(this.refreshBtn);
             this.Controls.Add(this.commentBtn);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.cancelBtn);
@@ -397,6 +390,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("SF Pro Rounded", 9.75F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Sales";
             this.Text = "Sales";
@@ -430,7 +424,6 @@
         private System.Windows.Forms.Button cancelBtn;
         private System.Windows.Forms.Button saveBtn;
         private System.Windows.Forms.Button commentBtn;
-        private System.Windows.Forms.Button refreshBtn;
         private System.Windows.Forms.Button searchBtn;
         private System.Windows.Forms.TextBox searchBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn num;

@@ -26,7 +26,7 @@ namespace Warehouse
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
-
+                dataGridView1.AutoGenerateColumns = false;
                 dataGridView1.DataSource = dt;
             }
         }
@@ -131,6 +131,27 @@ namespace Warehouse
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
             dataGridView1.Sort(dataGridView1.Columns[2], ListSortDirection.Ascending);
+        }
+
+        private void groupsChBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (groupsChBox.Checked == false)
+            {
+                groupsPanel.Visible = false;
+                dataGridView1.Location = new Point(12, 13);
+                dataGridView1.Size = new Size(482, 353);
+                dataGridView1.Columns["name"].MinimumWidth = 280;
+                dataGridView1.Columns["name"].Width = 280;
+
+            }
+            else
+            {
+                groupsPanel.Visible = true;
+                dataGridView1.Location = new Point(143, 13);
+                dataGridView1.Size = new Size(356, 353);
+                dataGridView1.Columns["name"].MinimumWidth = 150;
+                dataGridView1.Columns["name"].Width = 150;
+            }
         }
     }
 }

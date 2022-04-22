@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Warehouse
 {
@@ -63,7 +64,68 @@ namespace Warehouse
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            FillSettingsFile.ReadFile();
+            using (StreamReader sr = new StreamReader("Settings.txt"))
+            {
+                string line = sr.ReadLine();
+                if (line == null)
+                {
+                    GettingStarted g = new GettingStarted();
+                    this.Hide();
+                    g.Show();
+                }
+                else
+                {
+                    FillSettingsFile.ReadFile();
+                }
+            }
+            
+        }
+
+        private void usersBtn_Click(object sender, EventArgs e)
+        {
+            UsersShow usersShow = new UsersShow();
+            usersShow.Show();
+        }
+
+        private void productsBtn_Click(object sender, EventArgs e)
+        {
+            ProductsShow p = new ProductsShow();
+            p.Show();
+        }
+
+        private void partnersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PartnersShow partners = new PartnersShow();
+            partners.Show();
+        }
+
+        private void productsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProductsShow products = new ProductsShow();
+            products.Show();
+        }
+
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UsersShow users = new UsersShow();
+            users.Show();
+        }
+
+        private void sitesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SitesShow sites = new SitesShow();
+            sites.Show();
+        }
+
+        private void operationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void saleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sales sales = new Sales();
+            sales.Show();
         }
     }
 }

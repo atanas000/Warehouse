@@ -54,5 +54,40 @@ namespace Warehouse
         {
             userBox.Text = Data.Name;
         }
+
+        private void partnerShow_Click(object sender, EventArgs e)
+        {
+            PartnersShow partners = new PartnersShow();
+            partners.FormClosing += new FormClosingEventHandler(this.pS_FormClosing);
+            partners.Show();
+        }
+        private void pS_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            partnerBox.Text = Data.Partner;
+        }
+
+        private void locationShow_Click(object sender, EventArgs e)
+        {
+            SitesShow sites = new SitesShow();
+            sites.FormClosing += new FormClosingEventHandler(this.sites_FormClosing);
+            sites.Show();
+        }
+        private void sites_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            locationBox.Text = Data.Site;
+        }
+
+        private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            foreach (DataGridViewRow item in dataGridView1.Rows)
+            {
+                
+                Button b1 = new Button();
+                b1.Text = "...";
+                b1.Size = new Size(25, 18);
+                b1.Location = new Point(531, 231);
+            }
+            
+        }
     }
 }

@@ -54,5 +54,10 @@ namespace Warehouse
             }
             
         }
+
+        private void NewUser_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

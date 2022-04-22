@@ -33,8 +33,13 @@ namespace Warehouse
         //user data
         public static string PrimaryKey;
         public static string Name;
+        public static string Partner;
+        public static string IDPartner;
         public static int IDUser;
-        
+        public static string Site;
+        public static string IDSite;
+
+
 
         //connection string
         public static MySqlConnection conn = new MySqlConnection("Server=" + FillSettingsFile.server + ";" + "port=" + FillSettingsFile.port + ";" + "Database=" + FillSettingsFile.db + ";" + "user=" + FillSettingsFile.username + ";" + "pwd=" + FillSettingsFile.password);

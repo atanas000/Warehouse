@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AdvancedWizard, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f78a146ea70566cc, processorArchitecture=MSIL">
+      <HintPath>..\packages\AdvancedWizard.4.0.0.0\lib\AdvancedWizard.dll</HintPath>
+    </Reference>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
@@ -99,11 +102,35 @@
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Data.cs" />
+    <Compile Include="EditPartner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPartner.Designer.cs">
+      <DependentUpon>EditPartner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditProduct.Designer.cs">
+      <DependentUpon>EditProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditSite.Designer.cs">
+      <DependentUpon>EditSite.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditUser.Designer.cs">
       <DependentUpon>EditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GettingStarted.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GettingStarted.Designer.cs">
+      <DependentUpon>GettingStarted.cs</DependentUpon>
     </Compile>
     <Compile Include="HomePanel.cs">
       <SubType>Form</SubType>
@@ -111,11 +138,35 @@
     <Compile Include="HomePanel.Designer.cs">
       <DependentUpon>HomePanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewPartner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPartner.Designer.cs">
+      <DependentUpon>NewPartner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewProduct.Designer.cs">
+      <DependentUpon>NewProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewSite.Designer.cs">
+      <DependentUpon>NewSite.cs</DependentUpon>
+    </Compile>
     <Compile Include="NewUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NewUser.Designer.cs">
       <DependentUpon>NewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartnersShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartnersShow.Designer.cs">
+      <DependentUpon>PartnersShow.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -124,6 +175,18 @@
     </Compile>
     <Compile Include="Sales.Designer.cs">
       <DependentUpon>Sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductsShow.Designer.cs">
+      <DependentUpon>ProductsShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SitesShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SitesShow.Designer.cs">
+      <DependentUpon>SitesShow.cs</DependentUpon>
     </Compile>
     <Compile Include="UsersShow.cs">
       <SubType>Form</SubType>
@@ -134,14 +197,41 @@
     <EmbeddedResource Include="ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditPartner.resx">
+      <DependentUpon>EditPartner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditProduct.resx">
+      <DependentUpon>EditProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditSite.resx">
+      <DependentUpon>EditSite.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditUser.resx">
       <DependentUpon>EditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GettingStarted.resx">
+      <DependentUpon>GettingStarted.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePanel.resx">
       <DependentUpon>HomePanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewPartner.resx">
+      <DependentUpon>NewPartner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewProduct.resx">
+      <DependentUpon>NewProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewSite.resx">
+      <DependentUpon>NewSite.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NewUser.resx">
       <DependentUpon>NewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartnersShow.resx">
+      <DependentUpon>PartnersShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductsShow.resx">
+      <DependentUpon>ProductsShow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -154,6 +244,9 @@
     </Compile>
     <EmbeddedResource Include="Sales.resx">
       <DependentUpon>Sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SitesShow.resx">
+      <DependentUpon>SitesShow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsersShow.resx">
       <DependentUpon>UsersShow.cs</DependentUpon>
